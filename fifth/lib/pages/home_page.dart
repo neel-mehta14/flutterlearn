@@ -1,3 +1,4 @@
+import 'package:fifth/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 // ignore_for_file: prefer_const_constructors
@@ -13,14 +14,13 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text('Hello welcome to flutter'),
+          child: Text(
+            'Hello welcome to flutter',
+            style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
-      drawer: Drawer(
-        child: Container(
-          color: Colors.grey[300],
-        ),
-      ),
+      drawer: MyDrawer(),
     );
   }
 }

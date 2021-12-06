@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore_for_file: prefer_const_constructors
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

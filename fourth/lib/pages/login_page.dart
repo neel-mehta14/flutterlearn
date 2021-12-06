@@ -1,4 +1,4 @@
-import 'dart:ffi';
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -15,6 +15,7 @@ class LoginPage extends StatelessWidget {
           ),
           SizedBox(
             height: 20.0,
+            width: 00.0,
           ),
           Text(
             "Welcome",
@@ -25,11 +26,12 @@ class LoginPage extends StatelessWidget {
           ),
           SizedBox(
             height: 20.0,
+            width: 40.0,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              vertical: 16.0,
-              horizontal: 32.0,
+              vertical: 20.0,
+              horizontal: 40.0,
             ),
             child: Column(
               children: [
@@ -37,6 +39,11 @@ class LoginPage extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: "Enter Username",
                     labelText: "Username",
+                    labelStyle: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 TextFormField(
@@ -44,6 +51,11 @@ class LoginPage extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: "Enter Password",
                     labelText: "Password",
+                    labelStyle: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -53,7 +65,12 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     print("Welocme to Flutter");
                   },
-                  child: Text("Login"),
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   style: TextButton.styleFrom(),
                 ),
               ],
