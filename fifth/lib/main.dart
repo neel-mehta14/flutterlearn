@@ -1,4 +1,5 @@
 import 'package:fifth/utils/routes.dart';
+import 'package:fifth/widgets/themes.dart';
 import 'package:flutter/material.dart';
 // ignore_for_file: prefer_const_constructors
 import 'package:fifth/pages/home_page.dart';
@@ -14,10 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+      theme: MyTheme.lightTheme(context),
       darkTheme: ThemeData(
         brightness: Brightness.light,
       ),
