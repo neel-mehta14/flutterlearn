@@ -1,4 +1,6 @@
+import 'package:fifth/models/catalog.dart';
 import 'package:fifth/widgets/drawer.dart';
+import 'package:fifth/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 
 // ignore_for_file: prefer_const_constructors
@@ -13,12 +15,15 @@ class HomePage extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      body: Center(
-        child: Container(
-          child: Text(
-            'Hello welcome to flutter',
-            style: TextStyle(fontSize: 20),
-          ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: CatalogModel.items[index],
+            );
+          },
         ),
       ),
       drawer: MyDrawer(),
